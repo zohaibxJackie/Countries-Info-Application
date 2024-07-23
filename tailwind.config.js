@@ -26,6 +26,9 @@ export default {
       },
       fontFamily: {
         'font-family': "Nunito Sans"
+      },
+      gridTemplateColumns: {
+        'autofit': "repeat(auto-fit, minmax(250px, 1fr))"
       }
     },
   },
