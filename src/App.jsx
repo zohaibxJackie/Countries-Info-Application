@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import SearchandFilter from "./components/SearchandFilter";
 import FilterResult from "./components/FilterResult";
 import SearchResult from "./components/SearchResult";
+import Error404 from "./components/Error404";
 import { useEffect, useState } from "react";
 
 const App = () => {
@@ -16,20 +17,23 @@ const App = () => {
   }
 
   return (
-    <div className="min-h-screen min-w-screen bg-VeryLightGrayBg dark:bg-VeryDarkBlueBg font-font-family max-w-[1440px]">
-      <Header />
-      <div className="px-2">
-        {(location.pathname === '/' || location.pathname.startsWith('/filter-result')) && <SearchandFilter data={data} onData={handleData} />}
-        <Routes>
-          {/* Home route */}
-          <Route path="/" element={<Home />} />
+    <div className="dark:bg-VeryDarkBlueBg">
+      <div className="mx-auto min-h-screen min-w-screen bg-VeryLightGrayBg dark:bg-VeryDarkBlueBg font-font-family max-w-[1440px]">
+        <Header />
+        <div className="px-2">
+          {(location.pathname === '/' || location.pathname.startsWith('/filter-result')) && <SearchandFilter data={data} onData={handleData} />}
+          <Routes>
+            {/* Home route */}
+            <Route path="/" element={<Home data={data} onData={handleData} />} />
 
-          {/* Route for search results with query parameter handling */}
-          <Route path="/filter-result" element={<FilterResult />}>
-            <Route path=":region" element={<FilterResult />} />
-          </Route>
-          <Route path="/search-result" element={<SearchResult data={data} />} />
-        </Routes>
+            {/* Route for search results with query parameter handling */}
+            <Route path="/filter-result" element={<FilterResult />}>
+              <Route path=":region" element={<FilterResult />} />
+            </Route>
+            <Route path="/search-result" element={<SearchResult data={data} />} />
+            <Route path="/nothing-found" element={<Error404 />} />
+          </Routes>
+        </div>
       </div>
     </div>
   );

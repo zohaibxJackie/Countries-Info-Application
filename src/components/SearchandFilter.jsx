@@ -27,7 +27,7 @@ const SearchandFilter = ({onData, data}) => {
       const result = await response.json();
       await onData(result); // Store fetched data for potential display
     } catch (error) {
-      console.error("Error fetching country data:", error);
+      navigate('/nothing-found');
     }
   };
 
@@ -43,9 +43,9 @@ const SearchandFilter = ({onData, data}) => {
   };
 
   return (
-    <div className="my-8 flex justify-between text-HomepageItems">
-      <form onSubmit={searchCountry} className="h-10 w-[18rem] shadow-md bg-white dark:bg-DarkBlue flex rounded-md">
-        <span className="h-full flex items-center justify-center px-1 dark:text-white"><IoSearchSharp /></span>
+    <div className="my-8 flex justify-between text-HomepageItems max-sm:flex-col gap-1 max-sm:gap-5">
+      <form onSubmit={searchCountry} className="h-10 w-[18rem] max-sm:w-full shadow-md bg-white dark:bg-DarkBlue flex rounded-md">
+        <span className="h-full flex items-center justify-center px-1 dark:text-white ml-2"><IoSearchSharp /></span>
         <input
           type="text"
           className="h-full w-full bg-transparent outline-none dark:text-white"
@@ -55,13 +55,13 @@ const SearchandFilter = ({onData, data}) => {
         />
       </form>
       <select
-        className="w-48 text-center dark:bg-DarkBlue dark:text-white shadow-md rounded-md cursor-pointer"
+        className="w-48 h-8 text-center dark:bg-DarkBlue dark:text-white shadow-md rounded-md cursor-pointer"
         onChange={handleSelectChange}
         value={region} // Set initial selected value
       >
         <option value="">Select by Region...</option>
         <option value="Africa">Africa</option>
-        <option value="America">America</option>
+        <option value="Americas">Americas</option>
         <option value="Asia">Asia</option>
         <option value="Europe">Europe</option>
         <option value="Oceania">Oceania</option>

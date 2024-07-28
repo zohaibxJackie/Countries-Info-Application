@@ -32,6 +32,14 @@ export default {
       },
       opacity: {
         'DetailedPageOpacity': '0.75'
+      },
+      keyframes: {
+        spin: {
+          'to': {transform: 'rotate(360deg)'},
+        }
+      },
+      animation: {
+        spin: 'spin 30s ease-in-out infinite',
       }
     },
   },

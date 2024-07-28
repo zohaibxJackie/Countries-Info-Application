@@ -27,7 +27,7 @@ const Header = () => {
                     <input
                         type="checkbox"
                         id="dark-mode-toggle"
-                        className='cursor-pointer inline-block relative h-6 w-10 rounded-full appearance-none bg-VeryLightGrayBg align-middle before:content-["🌞"] before:absolute before:left-0 before:block before:translate-x-0 checked:bg-green-300 checked:before:translate-x-full checked:before:content-["🌛"]'
+                        className='cursor-pointer inline-block relative h-6 w-10 rounded-full appearance-none bg-VeryLightGrayBg align-middle before:content-["🌞"] before:absolute before:top-[2px] before:right-[17px] before:block before:translate-x-0 checked:bg-green-300 checked:before:translate-x-full checked:before:content-["🌛"]'
                         checked={theme === 'dark'} readOnly={true}
                     />
                     <p className='inline'>Dark Mode</p>
