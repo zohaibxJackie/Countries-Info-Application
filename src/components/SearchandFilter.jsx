@@ -36,7 +36,7 @@ const SearchandFilter = ({onData, data}) => {
     const selectedRegion = event.target.value;
 
     if (selectedRegion === "") {
-      navigate("/"); // Navigate to home route if region is empty
+      navigate("/Countries-Info-Application"); // Navigate to home route if region is empty
     } else {
       navigate(`/filter-result?region=${selectedRegion}`); // Navigate with query parameter
     }
