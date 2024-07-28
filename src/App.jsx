@@ -21,10 +21,10 @@ const App = () => {
       <div className="mx-auto min-h-screen min-w-screen bg-VeryLightGrayBg dark:bg-VeryDarkBlueBg font-font-family max-w-[1440px]">
         <Header />
         <div className="px-2">
-          {(location.pathname === '/' || location.pathname.startsWith('/filter-result')) && <SearchandFilter data={data} onData={handleData} />}
+          {(location.pathname === '/Countries-Info-Application' || location.pathname.startsWith('/filter-result')) && <SearchandFilter data={data} onData={handleData} />}
           <Routes>
             {/* Home route */}
-            <Route path="/" element={<Home data={data} onData={handleData} />} />
+            <Route path="/Countries-Info-Application" element={<Home data={data} onData={handleData} />} />
 
             {/* Route for search results with query parameter handling */}
             <Route path="/filter-result" element={<FilterResult />}>
