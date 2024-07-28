@@ -16,8 +16,8 @@ export default {
         'white': 'hsl(0, 0%, 100%)'
       },
       fontSize: {
-        'HomepageItems': '14px',
-        'DetailPage': '16px'
+        'HomepageItems': '0.875rem',
+        'DetailPage': '1rem'
       },
       fontWeight: {
         'fw-300': '300',
@@ -29,6 +29,9 @@ export default {
       },
       gridTemplateColumns: {
         'autofit': "repeat(auto-fit, minmax(250px, 1fr))"
+      },
+      opacity: {
+        'DetailedPageOpacity': '0.75'
       }
     },
   },
