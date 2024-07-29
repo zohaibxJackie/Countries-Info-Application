@@ -27,7 +27,7 @@ const App = () => {
             <Route path="/Countries-Info-Application" element={<Home data={data} onData={handleData} />} />
 
             {/* Route for search results with query parameter handling */}
-            <Route path="/filter-result" element={<FilterResult />}>
+            <Route path="/filter-result" element={<FilterResult data={data} onData={handleData} />}>
               <Route path=":region" element={<FilterResult />} />
             </Route>
             <Route path="/search-result" element={<SearchResult data={data} />} />
