@@ -29,7 +29,7 @@ const FilterResult = ({onData, data}) => {
     <div className='grid gap-8 px-8 grid-cols-autofit'>
       {
         fileData.map((currentValue, index) => (
-          (currentValue.region === region) && <div key={index} onClick={() => {handleData(currentValue.name)}} className='cart grid grid-rows-subgrid row-span-2 dark:bg-DarkBlue rounded-md bg-white shadow-md text-country-card-item cursor-pointer'>
+          (currentValue.region === region) && <div key={index} onClick={() => {handleData(currentValue.name)}} className='cart grid grid-rows-subgrid row-span-2 dark:bg-DarkBlue rounded-md bg-white shadow-md text-country-card-item cursor-pointer hover:scale-110 transition-all duration-500'>
             <img src={currentValue.flags.png} alt="flag" className='max-w-full w-full' />
             <div className='dark:text-white pl-4 pb-8'>
               <p>{currentValue.name}</p>

@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div className="dark:bg-VeryDarkBlueBg">
-      <div className="mx-auto min-h-screen min-w-screen bg-VeryLightGrayBg dark:bg-VeryDarkBlueBg font-font-family max-w-[1440px]">
+      <div className="mx-auto min-h-screen min-w-screen bg-VeryLightGrayBg dark:bg-VeryDarkBlueBg font-font-family max-w-[2220px]">
         <Header />
         <div className="px-2">
           {(location.pathname.startsWith('/Countries-Info-Application') || location.pathname.startsWith('/filter-result')) && <SearchandFilter data={data} onData={handleData} />}
