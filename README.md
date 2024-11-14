@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [solution URL](https://github.com/zohaibxJackie/Countries-Info-Application)
-- Live Site URL: [Rock-Paper-Scissor-Game](https://zohaibxjackie.github.io/Countries-Info-Application/)
+- Live Site URL: [Countries-Info-Application](https://zohaibxjackie.github.io/Countries-Info-Application/)
 
 ## My process
 
